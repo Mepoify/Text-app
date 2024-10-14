@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.user-list {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+
+.chat-area {
+    flex: 1;
+    padding: 10px;
+}
+
+#chat-window {
+    height: calc(100% - 50px);
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#message-input {
+    width: 80%;
+    padding: 10px;
+}
+
+#send-message {
+    padding: 10px;
+}
+
+.sending {
+    position: fixed; /* Fix position to keep it at the bottom */
+    left: 50%; /* Center horizontally */
+    bottom: 20px; /* Space from the bottom */
+    transform: translateX(-50%); /* Center it correctly */
+    width: 80%; /* Set a width for better responsiveness */
+    max-width: 600px; /* Optional: Max width to keep it contained */
+    display: flex; /* Flexbox for input and button alignment */
+    gap: 10px; /* Space between input and button */
+}
