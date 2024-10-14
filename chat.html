@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text App - Chat Interface</title>
+    <link rel="stylesheet" href="chat_styles.css"> <!-- Link to chat styles -->
+</head>
+<body>
+    <div class="chat-container">
+        <header>
+            <h1>Welcome to the Chat!</h1>
+            <div class="user-info">
+                <div id="header">
+                    <span id="username-display">Username</span>
+                    <button id="logout" onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </header>
+        <div class="user-list">
+            <h2>Users</h2>
+            <ul id="user-list">
+                <!-- Dynamically populated user list -->
+            </ul>
+        </div>
+        <div class="chat-window">
+               <div class="messages" id="messages">
+                <!-- Chat messages will appear here -->
+        </div>
+        <div class="sending">
+            <input type="text" id="message-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+    <script src="chat.js"></script>
+
+    <script>
+       
+        function logout() {
+            // Logic to log out and redirect to auth.html
+            window.location.href = "auth.html";
+        }
+
+        // Basic loading
+        window.onload = updateUsername()
+        window.onload = loadUsers;
+
+        function updateUsername() {
+            // Update the span text with the usernameOrEmail variable
+            document.getElementById('username-display').innerText = `${usernameOrEmail}`;
+            console.log('updateUsername() has been called')
+        }
+
+    </script>
+
+</body>
+</html>
+
