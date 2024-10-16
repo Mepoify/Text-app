@@ -8,19 +8,12 @@ let currentUser = 'User1'; // Replace with the logged-in user's name
         }
 
 
-// Sending message functionality
-document.getElementById('send-message').onclick = function () {
-    const messageInput = document.getElementById('message-input');
-    const message = messageInput.value;
-    if (message) {
-        const chatWindow = document.getElementById('chat-window');
-        const messageElement = document.createElement('div');
-        messageElement.textContent = `${currentUser}: ${message}`;
-        chatWindow.appendChild(messageElement);
-        messageInput.value = ''; // Clear input
-        chatWindow.scrollTop = chatWindow.scrollHeight; // Scroll to bottom
-    }
-};
+// Sending message functionality to start here
+
+
+
+// Sending message functionality to end here
+
 
 // Log out functionality
 document.getElementById('logout-button').onclick = function () {
