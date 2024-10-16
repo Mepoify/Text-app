@@ -18,6 +18,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     event.preventDefault();
     const usernameOrEmail = document.querySelector('#login-container input[type="text"]').value;
     const password = document.querySelector('#login-container input[type="password"]').value;
+    localStorage.setItem('usernameOrEmail', usernameOrEmail);
 
     // For now, let's mock a successful login
     if (usernameOrEmail && password) {
@@ -26,8 +27,3 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         window.location.href = "chat.html";
     }
 });
-
-// Optional: Handle account creation link (if you plan to implement this feature)
-document.getElementById('create-account-link').onclick = function () {
-    alert('Account creation feature coming soon!');
-};
