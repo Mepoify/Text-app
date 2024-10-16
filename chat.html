@@ -35,20 +35,25 @@
     <script src="chat.js"></script>
 
     <script>
+        // Get from local storage amoung files
+        const usernameOrEmail = localStorage.getItem('usernameOrEmail');
        
         function logout() {
             // Logic to log out and redirect to auth.html
+            localStorage.removeItem('usernameOrEmail');
             window.location.href = "auth.html";
+            console.log(`Logged out ${usernameOrEmail}!`);
         }
 
         // Basic loading
-        window.onload = updateUsername()
-        window.onload = loadUsers;
+        window.onload = function() {
+        updateUsername();
+         };
 
         function updateUsername() {
             // Update the span text with the usernameOrEmail variable
             document.getElementById('username-display').innerText = `${usernameOrEmail}`;
-            console.log('updateUsername() has been called')
+            console.log(`${usernameOrEmail} has been displayed as current user`)
         }
 
     </script>
