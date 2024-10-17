@@ -40,9 +40,12 @@
        
         function logout() {
             // Logic to log out and redirect to auth.html
+            console.log("\nLogging out...")
             localStorage.removeItem('usernameOrEmail');
+            console.log("Part 1/2 (Item removal) Finshed")
             window.location.href = "auth.html";
-            console.log(`Logged out ${usernameOrEmail}!`);
+            console.log("Part 2/2 (redirection) Finshed")
+            console.log(`Logged out ${usernameOrEmail}!\n`);
         }
 
         // Basic loading
