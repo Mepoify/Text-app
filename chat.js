@@ -15,11 +15,7 @@ let currentUser = 'User1'; // Replace with the logged-in user's name
 // Sending message functionality to end here
 
 
-// Log out functionality
-document.getElementById('logout-button').onclick = function () {
-    alert('Logging out...')
-    console.log("logging out")
-};
+
 
 document.getElementById('logout').addEventListener('click', function() {
     localStorage.removeItem('username');
